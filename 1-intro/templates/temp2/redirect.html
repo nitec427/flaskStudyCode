@@ -1,0 +1,25 @@
+{% extends "temp2/base.html" %}
+{% block content %}
+<div class="jumbotron">
+    <p class="lead">Let see how you performed</p>
+    {% if lower and upper and digit %}
+    <p class="lead">Your username passed the 3 requirements.</p>
+    {% else %}
+    <p class="lead">Oh no! Looks like you had issues with your username</p>
+    <p class="lead">Here are the requirements you have failed.</p>
+    {%endif %}
+    <ul class="list-group">
+        {% if not lower %}
+        <li class="list-group-item">You didn't use lowercase letter.</li>
+        {%endif %}
+        {% if not upper %}
+        <li class="list-group-item">You didn't use uppercase letter.</li>
+        {%endif %}
+        {% if not digit %}
+        <li class="list-group-item">You didn't use any digit.</li>
+        {%endif %}
+    </ul>
+
+
+</div>
+{% endblock %}

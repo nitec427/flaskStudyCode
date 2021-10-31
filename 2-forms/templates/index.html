@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+<h1>Welcome to the Survey</h1>
+<form method="POST">
+    <div class="form-group">
+        {{form.hidden_tag()}}
+        <!-- Necessary -->
+        {{form.breed.label}} {{form.breed(class="form-control")}}
+        <br>
+        {{form.neutered.label}} {{form.neutered(class="form-check-input")}}
+        <br>
+        <br>
+        {{form.food_choice.label}} {{form.food_choice(class="form-control")}} <br>
+        {{form.mood.label}} {{form.mood(class="form-control")}}
+
+        Any other feedback
+        {{form.feedback}}
+        {{form.submit()}}
+    </div>
+</form>
+{% endblock %}

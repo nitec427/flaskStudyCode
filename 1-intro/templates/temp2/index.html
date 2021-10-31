@@ -1,0 +1,20 @@
+{%extends "temp2/base.html"%}
+
+{% block content %}
+<div class="jumbotron">
+    <h3>Welcome to User Name Check Page</h3>
+    <p class="lead">Your password must follow the following criteria:</p>
+
+    <ul class="list-group">
+        <li class="list-group-item">Must have an upper case letter somewhere.</li>
+        <li class="list-group-item">Must have a lower case letter somewhere.</li>
+        <li class="list-group-item">Must have a number at the end.</li>
+        <form action="{{url_for('redirect')}}">
+            <label for="user_name">Username: </label>
+            <input type="text" id="user_name" name="user_name" placeholder="Enter user_name" class="form-control">
+            <button class="btn btn-primary p-3" type="submit">Submit Form</button>
+        </form>
+
+    </ul>
+</div>
+{% endblock %}

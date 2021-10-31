@@ -1,0 +1,13 @@
+{%extends "temp/base.html"%}
+{%block content%}
+<form method="POST">
+    <div class=" form-group">
+        <label for="fname">First name: </label>
+        <input type="text" id="f_name" name="f_name" placeholder="First Name" class="form-control">
+        <label for="lname">Second name: </label>
+        <input type="text" id="l_name" name="l_name" placeholder="Last Name" class="form-control">
+
+        <button type="submit" class="btn btn-success mt-3 p-3">Submit</button>
+    </div>
+</form>
+{%endblock%}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Report{% endblock %}
+
+{% block content %}
+<h3>After getting your input, we prepared the information below.</h3>
+
+<ul class="list-group">
+    <li class="list-group-item"> <span class="lead">Breed: </span>{{session['breed']}}</li>
+    <li class="list-group-item"> <span class="lead">Neutered: </span>{{session['neutered']}}</li>
+    <li class="list-group-item"> <span class="lead">Mood: </span>{{session['mood']}}</li>
+    <li class="list-group-item"> <span class="lead">Food: </span>{{session['food']}}</li>
+    <li class="list-group-item"> <span class="lead">Feedback: </span>{{session['feedback']}}</li>
+</ul>
+{% endblock %}

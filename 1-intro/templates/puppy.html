@@ -1,0 +1,15 @@
+{%extends "base.html"%}
+{%block content%}
+<div class="container">
+    <h1>This is the official webpage of {{user_name}}.</h1>
+    <p>The spelling of the name above: {{letters}}</p>
+    <p>Below is a nice photo of puppy </p>
+    <ul class="list-group">
+        {% for letter in letters %}
+        <li class="list-group-item">{{letter}}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{url_for('static',filename='puppy1.jpg')}}">Click to see image</a>
+    <img src="../static/puppy1.jpg" alt="Puppy Image" title="Puppy Image">
+</div>
+{%endblock%}
